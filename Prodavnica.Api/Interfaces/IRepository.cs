@@ -5,6 +5,21 @@ namespace Prodavnica.Api.Interfaces
     public interface IRepository
     {
         /// <summary>
+        ///     Check if user exists in DB
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        bool UserExistsEmail(string email);
+
+        /// <summary>
+        ///     Return user by username
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        UserDto GetUserEmail(string email);
+
+
+        /// <summary>
         ///     Registers a new user
         /// </summary>
         /// <param name="userDto"></param>

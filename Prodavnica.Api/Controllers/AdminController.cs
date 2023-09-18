@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Prodavnica.Api.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Prodavnica.Api.Dto;
 
 namespace Prodavnica.Api.Controllers
 {

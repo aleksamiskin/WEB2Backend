@@ -33,6 +33,18 @@ namespace Prodavnica.Api.Repository
             return _mapper.Map<UserDto>(user);
         }
 
+        public bool UserExistsEmail(string email)
+        {
+            return _dbContext.Users.Any(c => c.Email == email);
+        }
+
+
+        public UserDto GetUserEmail(string email)
+        {
+            User user = _dbContext.Users.SingleOrDefault(c => c.Email == email);
+            return _mapper.Map<UserDto>(user);
+        }
+
         public List<UserDto> GetAllUnverified()
         {
             List<User> users = _dbContext.Users.ToList();
