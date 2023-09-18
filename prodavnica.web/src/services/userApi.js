@@ -21,7 +21,7 @@ const apiPut = async (operation, data) => {
 };
 
 const RegisterUser = async(data) => {
-    return apiPost("", data);
+    return apiPost("/RegisterUser", data);
 }
 
 const UpdateProfile = async(data) => {
@@ -48,6 +48,10 @@ const GetAllItems = async() => {
     return api.get("/GetAllItems");
 }
 
+const MakePurchase = async(data) => {
+    return api.post("/MakeOrder", data);
+}
+
 const UserApi = {
     RegisterUser,
     UpdateProfile,
@@ -55,7 +59,8 @@ const UserApi = {
     GetProfile,
     GetUserType,
     OrderHistory,
-    GetAllItems
+    GetAllItems,
+    MakePurchase
 }
 
 export default UserApi;
